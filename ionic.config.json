@@ -1,6 +1,6 @@
 {
   "name": "Medical_equipment",
-  "app_id": "",
+  "app_id": "d81fdb89",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}

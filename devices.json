@@ -1,0 +1,16 @@
+devices = [
+    {
+        brand: 'philips',
+        type:'radiology',
+        companies: ['amir'],
+        image_url: 'philips.jpg',
+        price: 1000
+    },
+    {
+        brand: 'mindray',
+        type:'radiology',
+        companies: ['amirmolavi'],
+        image_url: 'mindray.jpg',
+        price: 1000
+    }
+];
