@@ -1,0 +1,7 @@
+//sudo git clone git@git.ionicjs.com:behnamgh/medical-equipment.git --origin=ionic
+
+//git push --set-upstream origin master
+
+//git remote add origin https://github.com/Behnamgh/Medical_equipment
+
+//ionic link --pro-id d81fdb89
