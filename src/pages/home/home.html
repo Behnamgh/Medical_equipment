@@ -7,27 +7,29 @@
 <ion-content padding>
   <ion-card *ngFor="let device of devices">
 
- <ion-card-header>
-   {{ device.brand }}
- </ion-card-header>
+    <ion-card-header>
+      {{ device.brand }}
+    </ion-card-header>
 
-    <img src="device.imgUrl">
+    <img src="{{ device.imgUrl }}">
 
     <ion-card-content>
-      <p>{{ deivce.desc }}</p>
+      <p>{{ device.description }}</p>
+      <button ion-button (click)="itemTapped($event, device)">Button</button>
+
     </ion-card-content>
 
     <ion-row>
       <ion-col>
         <button ion-button icon-left clear small>
           <ion-icon name="thumbs-up"></ion-icon>
-          <div>{{ device.like }} Likes</div>
+          <div (click)="device.like = device.like+1">{{ device.like }} Likes</div>
         </button>
       </ion-col>
       <ion-col>
         <button ion-button icon-left clear small>
           <ion-icon name="text"></ion-icon>
-          <div>{{ device.comment }} Comments</div>
+          <div (click)="device.comment = device.comment+1">{{ device.comment }} Comments</div>
         </button>
       </ion-col>
       <ion-col center text-center>
