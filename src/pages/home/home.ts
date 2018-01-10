@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { BrandDetailPage } from '../brand-detail/brand-detail';
+import { BrandsPage } from '../brands/brands'
 
 @Component({
   selector: 'page-home',
@@ -8,7 +9,10 @@ import { BrandDetailPage } from '../brand-detail/brand-detail';
 })
 export class HomePage {
   devices: any = [];
+  pushPage: any;
+
   constructor(public navCtrl: NavController) {
+    this.pushPage = BrandsPage;
     this.devices = [{
       brand: 'PHILIPS',
       imgUrl: '../assets/imgs/Philips1.jpg',
@@ -27,12 +31,13 @@ export class HomePage {
       comment: 312,
       like: 62,
       description: 'Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?!Whoa. This is heavy.'
-    }]
+    }];
   }
-  itemTapped(device) {
-    console.log('hi');
-    this.navCtrl.push(BrandDetailPage, {
-      device: device
-    });
+
+  openP(event, det){
+    this.navCtrl.push(BrandsPage,{
+      behnam: det
+    })
   }
 }
+
