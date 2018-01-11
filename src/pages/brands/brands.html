@@ -14,11 +14,10 @@
 
 
 <ion-content padding>
-  <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + behnam.imgUrl + ')'">
-    </div>
-  
+  <img src="{{ behnam.imgUrl }}" alt="">
+
   <div class="item-detail" padding>
-      <h2>{{behnam.brand}}</h2>
-      <p>{{behnam.description}}</p>
-    </div>
+    <h2>{{behnam.brand}}</h2>
+    <p>{{behnam.description}}</p>
+  </div>
 </ion-content>

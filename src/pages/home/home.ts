@@ -9,10 +9,9 @@ import { BrandsPage } from '../brands/brands'
 })
 export class HomePage {
   devices: any = [];
-  pushPage: any;
+  public pushPage: BrandsPage;
 
   constructor(public navCtrl: NavController) {
-    this.pushPage = BrandsPage;
     this.devices = [{
       brand: 'PHILIPS',
       imgUrl: '../assets/imgs/Philips1.jpg',
@@ -34,8 +33,8 @@ export class HomePage {
     }];
   }
 
-  openP(event, det){
-    this.navCtrl.push(BrandsPage,{
+  openP(event, det) {
+    this.navCtrl.push(BrandsPage, {
       behnam: det
     })
   }
