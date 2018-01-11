@@ -2,6 +2,12 @@
   "name": "Medical_equipment",
   "app_id": "d81fdb89",
   "type": "ionic-angular",
+  "proxies": [
+    {
+      "path": "/list",
+      "proxyUrl": "https://medicalapiserver.herokuapp.com/list"
+    }
+  ],
   "integrations": {
     "cordova": {}
   }

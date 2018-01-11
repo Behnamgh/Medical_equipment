@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { BrandDetailPage } from '../brand-detail/brand-detail';
-import { BrandsPage } from '../brands/brands'
+import { BrandsPage } from '../brands/brands';
+import { DevicesProvider } from '../../providers/devices/devices';
 
 @Component({
   selector: 'page-home',
@@ -11,7 +11,7 @@ export class HomePage {
   devices: any = [];
   public pushPage: BrandsPage;
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public deviceProvider: DevicesProvider) {
     this.devices = [{
       brand: 'PHILIPS',
       imgUrl: '../assets/imgs/Philips1.jpg',
@@ -32,7 +32,9 @@ export class HomePage {
       description: 'Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?!Whoa. This is heavy.'
     }];
   }
-
+ionViewDidLoad(){
+  this.deviceProvider.getDevices().subscribe(result => console.log(result));
+}
   openP(event, det) {
     this.navCtrl.push(BrandsPage, {
       behnam: det
